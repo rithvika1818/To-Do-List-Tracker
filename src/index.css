@@ -1,0 +1,177 @@
+/* General styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 1.5rem;
+  font-style: normal;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: url('./assets/background.svg') no-repeat center center fixed;
+  background-size: cover; /* Adjust to cover the whole background */
+  overflow: auto; /* Allow scrolling */
+}
+
+/* Container for main content */
+.main-container {
+  width: 100%;
+  max-width: 800px; /* Adjust the max-width as needed */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  position: relative;
+  margin: 20px auto; /* Center the container and ensure space at the top and bottom */
+}
+
+.to-do-list {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  z-index: 1; /* Ensure it stays above the background image */
+}
+
+.to-do-list h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Sofia", sans-serif;
+}
+
+.to-do-list input[type="text"] {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: 2px solid #ced4da;
+  border-radius: 5px;
+  color: #495057;
+  transition: border-color 0.3s ease;
+}
+
+.to-do-list input[type="text"]:focus {
+  border-color: #1180f6;
+  outline: 0;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.to-do-list button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.to-do-list button:hover {
+  transform: scale(1.05);
+}
+
+.to-do-list .btn-success {
+  background-color: #28a745;
+}
+
+.to-do-list .btn-success:hover {
+  background-color: #218838;
+}
+
+.to-do-list .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.to-do-list .btn-outline-primary:hover {
+  background-color: #072533;
+  color: white;
+}
+
+.to-do-list .btn-outline-danger {
+  color: #072533;
+  border-color: #072533;
+}
+
+.to-do-list .btn-outline-danger:hover {
+  background-color: #072533;;
+  color: white;
+}
+
+.to-do-list ol {
+  padding: 0;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  animation: fadeIn 0.5s;
+}
+
+.to-do-list li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Merriweather', serif; /* To-do item font */
+  background-color: rgba(248, 249, 250, 0.9); /* Semi-transparent background for items */
+  margin-bottom: 10px;
+  border: 2px solid #e9ecef;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: slideIn 0.5s;
+}
+
+.dark-mode .to-do-list li {
+  background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent background for items in dark mode */
+  border-color: #495057;
+  color: #f8f9fa;
+}
+
+.to-do-list .text {
+  flex: 1;
+  font-style: italic; /* Italic text for to-do items */
+}
+
+.to-do-list .delete-button, .move-button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+.move-up {
+  animation: slideUp 0.5s ease;
+}
+
+.move-down {
+  animation: slideDown 0.5s ease;
+}
+
+/* Toggle switch positioning */
+.position-absolute {
+  position: absolute;
+  top: 20px; /* Adjust vertical positioning */
+  left: 20px; /* Adjust horizontal positioning */
+}
