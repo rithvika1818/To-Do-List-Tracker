@@ -8,7 +8,7 @@ body, html {
   font-style: normal;
   transition: background-color 0.3s ease, color 0.3s ease;
   background: url('./assets/background.svg') no-repeat center center fixed;
-  background-size: cover; /* Adjust to cover the whole background */
+  background-size: cover; /* Ensure the background covers the entire viewport */
   overflow: auto; /* Allow scrolling */
 }
 
@@ -184,4 +184,36 @@ body, html {
   position: absolute;
   top: 20px; /* Adjust vertical positioning */
   left: 20px; /* Adjust horizontal positioning */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 600px) {
+  .main-container {
+    padding: 10px;
+    margin: 10px auto;
+  }
+  
+  .to-do-list h1 {
+    font-size: 2rem;
+  }
+  
+  .to-do-list input[type="text"] {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  
+  .to-do-list button {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .to-do-list li {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  
+  .to-do-list .delete-button, .move-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
 }
