@@ -22,6 +22,12 @@ body, html {
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   position: relative;
   margin: 20px auto; /* Center the container and ensure space at the top and bottom */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .main-container {
+  background: rgba(52, 58, 64, 0.9); /* Semi-transparent background for dark mode */
+  color: #f8f9fa;
 }
 
 .to-do-list {
@@ -32,6 +38,10 @@ body, html {
   transition: background-color 0.3s ease, color 0.3s ease;
   background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   z-index: 1; /* Ensure it stays above the background image */
+}
+
+.dark-mode .to-do-list {
+  background: rgba(52, 58, 64, 0.9); /* Semi-transparent background for dark mode */
 }
 
 .to-do-list h1 {
@@ -94,7 +104,7 @@ body, html {
 }
 
 .to-do-list .btn-outline-danger:hover {
-  background-color: #072533;;
+  background-color: #072533;
   color: white;
 }
 
